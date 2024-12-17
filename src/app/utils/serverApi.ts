@@ -1,4 +1,4 @@
-import { ChampionListResponse } from "@/types/Champion";
+import { ChampionDetailResponse, ChampionListResponse } from "@/types/Champion";
 import { ItemListResponse } from "@/types/Item";
 
 const API_VERSION_URL = "https://ddragon.leagueoflegends.com/api/versions.json";
@@ -36,7 +36,7 @@ export const fetchChampionData = async (): Promise<ChampionListResponse> => {
   }
 };
 
-export const fetchItemData = async () : Promise<ItemListResponse>=> {
+export const fetchItemData = async (): Promise<ItemListResponse> => {
   try {
     const version = await fetchLatestVersion();
     const response = await fetch(
@@ -48,11 +48,32 @@ export const fetchItemData = async () : Promise<ItemListResponse>=> {
         "fetchItemData: 아이템 데이터를 불러오는데 실패했습니다."
       );
     }
-    
+
     const data: ItemListResponse = await response.json();
     return data;
   } catch (error) {
     console.log("fetchItemData: 아이템 데이터를 불러오는데 실패했습니다.");
+    throw error;
+  }
+};
+
+export const fetchChampionDetail = async (id: string): Promise<ChampionDetailResponse> => {
+  try {
+    const version = await fetchLatestVersion();
+    const response = await fetch(
+      `https://ddragon.leagueoflegends.com/cdn/${version}/data/ko_KR/champion/${id}.json`
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        "fetchChampionDetail: 챔피언 데이터를 불러오는데 실패했습니다."
+      );
+    }
+
+    const data: ChampionDetailResponse = await response.json();
+    return data;
+  } catch (error) {
+    console.log("fetchChampionDetail: 챔피언 데이터를 불러오는데 실패했습니다.");
     throw error;
   }
 };

@@ -7,14 +7,14 @@ export type ChampionData = {
   name: string; // 아트록스
   title: string; // 다르킨의 검
   blurb: string; // 챔피언의 짧은 설명
-  info: ChampionInfo; // 공격, 방어, 마법 등의 기본 정보
-  image: ChampionImage; // 이미지 정보
+  info: ChampionInfo;
+  image: ChampionImage;
   tags: string[]; // "Fighter", "Mage"
   partype: string; // "피의 샘" or "마나"
-  stats: ChampionStats; // 챔피언의 스탯 정보
+  stats: ChampionStats;
 };
 
-export  type ChampionInfo = {
+export type ChampionInfo = {
   attack: number;
   defense: number;
   magic: number;
@@ -23,8 +23,8 @@ export  type ChampionInfo = {
 
 export type ChampionImage = {
   full: string; // Aatrox.png
-  sprite: string; 
-  group: string; 
+  sprite: string;
+  group: string;
   x: number;
   y: number;
   w: number;
@@ -32,38 +32,53 @@ export type ChampionImage = {
 };
 
 type ChampionStats = {
-    hp: number;
-    hpperlevel: number;
-    mp: number;
-    mpperlevel: number;
-    movespeed: number;
-    armor: number;
-    armorperlevel: number;
-    spellblock: number;
-    spellblockperlevel: number;
-    attackrange: number;
-    hpregen: number;
-    hpregenperlevel: number;
-    mpregen: number;
-    mpregenperlevel: number;
-    crit: number;
-    critperlevel: number;
-    attackdamage: number;
-    attackdamageperlevel: number;
-    attackspeedperlevel: number;
-    attackspeed: number;
-  };
-  
-  export type ChampionListResponse = {
-    data: Record<string, ChampionData>; 
-  };
-  
+  hp: number;
+  hpperlevel: number;
+  mp: number;
+  mpperlevel: number;
+  movespeed: number;
+  armor: number;
+  armorperlevel: number;
+  spellblock: number;
+  spellblockperlevel: number;
+  attackrange: number;
+  hpregen: number;
+  hpregenperlevel: number;
+  mpregen: number;
+  mpregenperlevel: number;
+  crit: number;
+  critperlevel: number;
+  attackdamage: number;
+  attackdamageperlevel: number;
+  attackspeedperlevel: number;
+  attackspeed: number;
+};
 
-export type Champion = {
+export type ChampionListResponse = {
+  data: Record<string, ChampionData>;
+};
 
-}
-
+// 챔피언 상세 정보
 export type ChampionDetail = {
+  id: string; //Ahri
+  key: string; //103
+  name: string;
+  title: string; //구미호
+  image: ChampionImage;
+  skins: object;
+  lore: string;
+  blurb: string;
+  allytips: [];
+  enemytips: [];
+  tags: [];
+  partype: string;
+  info: ChampionInfo;
+  stats: object;
+  spells: [];
+  passive: object;
+  recommended: [];
+};
 
-}
-
+export type ChampionDetailResponse = {
+  data: Record<string, ChampionDetail>;
+};

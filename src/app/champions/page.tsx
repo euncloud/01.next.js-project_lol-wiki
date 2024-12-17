@@ -1,4 +1,4 @@
-import ChampionCard from "@/components/ChampionCard";
+import ChampionCard from "@/components/Card";
 import { fetchChampionData } from "../utils/serverApi";
 
 export const revalidate = 86400;
@@ -8,7 +8,7 @@ async function ChampionListPage() {
 
   return (
     <div className="w-full h-[100vh] pt-[80px]">
-      <div className="flex flex-col items-center justify-center max-w-[1400px]  mx-auto">
+      <div className="flex flex-col items-center justify-center max-w-[1400px] mx-auto">
         <h1 className="text-2xl font-semibold mb-6 text-sky-500">
           챔피언 목록
         </h1>

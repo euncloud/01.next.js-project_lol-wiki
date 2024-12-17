@@ -1,6 +1,6 @@
 import React from "react";
 import { fetchItemData } from "../utils/serverApi";
-import ChampionCard from "@/components/ChampionCard";
+import ChampionCard from "@/components/Card";
 
 async function ItemListPage() {
   const items = await fetchItemData();
