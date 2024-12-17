@@ -16,9 +16,12 @@ async function ChampionListPage() {
           {Object.entries(champions.data).map(([key, champion]) => (
             <ChampionCard
               key={key} // 객체의 키를 고유 key로 사용
+              id={champion.id}
+              version={champion.version}
               name={champion.name}
               title={champion.title}
               image={champion.image}
+              flag="champion"
             />
           ))}
         </div>

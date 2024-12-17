@@ -1,4 +1,5 @@
 import { ChampionListResponse } from "@/types/Champion";
+import { ItemListResponse } from "@/types/Item";
 
 const API_VERSION_URL = "https://ddragon.leagueoflegends.com/api/versions.json";
 
@@ -35,7 +36,7 @@ export const fetchChampionData = async (): Promise<ChampionListResponse> => {
   }
 };
 
-export const fetchItemData = async () => {
+export const fetchItemData = async () : Promise<ItemListResponse>=> {
   try {
     const version = await fetchLatestVersion();
     const response = await fetch(
@@ -47,6 +48,9 @@ export const fetchItemData = async () => {
         "fetchItemData: 아이템 데이터를 불러오는데 실패했습니다."
       );
     }
+    
+    const data: ItemListResponse = await response.json();
+    return data;
   } catch (error) {
     console.log("fetchItemData: 아이템 데이터를 불러오는데 실패했습니다.");
     throw error;

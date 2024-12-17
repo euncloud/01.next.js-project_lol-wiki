@@ -23,8 +23,8 @@ export  type ChampionInfo = {
 
 export type ChampionImage = {
   full: string; // Aatrox.png
-  sprite: string; // champion0.png
-  group: string; // champion
+  sprite: string; 
+  group: string; 
   x: number;
   y: number;
   w: number;
