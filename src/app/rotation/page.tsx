@@ -6,7 +6,7 @@ import { getChampionRotation } from "../utils/riotApi";
 import ChampionCard from "@/components/Card";
 
 
-function page() {
+function RotationPage() {
   const { isPending, error, data : champions} = useQuery({
     queryKey: ['champions'],
     queryFn: () => fetchChampionData(),
@@ -17,16 +17,15 @@ function page() {
     queryFn: (getChampionRotation),
   })
 
-  if (isPending || Pending) return '';
+  if (isPending || Pending) return '...is Pending';
 
-  if (error || err) return '';
+  if (error || err) return `Error :${ error || err}`;
 
   
   const rotationData = Object.entries(champions.data)
     .filter(([key, champion]) => (rotation.freeChampionIds).includes(Number(champion.key)))
     .map(([_, champion]) => champion);
 
-    console.log('rotationData', rotationData);
   return (
     <div className="w-full h-[100vh] pt-[80px]">
       <div className="flex flex-col items-center justify-center max-w-[1400px] mx-auto">
@@ -52,4 +51,4 @@ function page() {
   );
 }
 
-export default page;
+export default RotationPage;

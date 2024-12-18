@@ -5,8 +5,6 @@ import { NextResponse } from "next/server";
 export async function GET(req: Request) {
   try {
     const apiKey = process.env.RIOT_API_KEY;
-    console.log("apiKey", apiKey);
-
     const response = await fetch(
       "https://kr.api.riotgames.com/lol/platform/v3/champion-rotations",
       {
@@ -25,7 +23,6 @@ export async function GET(req: Request) {
 
     const data: ChampionRotation = await response.json();
     return NextResponse.json(data);
-    // response.json(data);
   } catch (error) {
     console.error(
       `fetchRotationChampions: 챔피언 로테이션 정보를 불러오는데 실패했습니다. ${error}`
