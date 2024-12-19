@@ -12,6 +12,10 @@ Riot API를 활용한 리그 오브 레전드 정보 앱
 
 <br>  
 
+## 사이트 미리보기
+![lol-wiki](https://github.com/user-attachments/assets/8352cabe-2580-4275-8950-810214b1aed9)
+
+
 ## 주요 기능
  **1. 챔피언 페이지**
 - ISR 랜더링 방식(86400초)
