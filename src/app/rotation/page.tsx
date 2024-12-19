@@ -17,7 +17,7 @@ function RotationPage() {
   
   const { isPending : Pending, error: err, data : rotation} = useQuery({
     queryKey: ['rotation'],
-    queryFn: (getChampionRotation),
+    queryFn: () => getChampionRotation(),
     staleTime: 24 * 60 * 60 * 1000,
   })
 
