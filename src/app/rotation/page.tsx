@@ -9,13 +9,13 @@ import Loading from "../loading";
 
 function RotationPage() {
   
-  const { isPending, error, data : champions} = useQuery({
+  const { isPending, error, data : champions } = useQuery({
     queryKey: ['champions'],
     queryFn: () => fetchChampionData(),
     staleTime: 7 * 24 * 60 * 60 * 1000,
   })
   
-  const { isPending : Pending, error: err, data : rotation} = useQuery({
+  const { isPending : Pending, error: err, data : rotation } = useQuery({
     queryKey: ['rotation'],
     queryFn: () => getChampionRotation(),
     staleTime: 24 * 60 * 60 * 1000,
