@@ -10,7 +10,7 @@ export default function Home() {
           alt="홈 이미지"
           width={1920}
           height={1080} 
-          className="w-full h-[100vh] object-cover top-0 absolute"
+          className="w-full h-auto object-cover top-0 absolute"
           priority={false}
         />
         <div className="absolute top-[20%] left-[25%]">
