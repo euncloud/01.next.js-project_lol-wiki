@@ -27,5 +27,6 @@ export async function GET(req: Request) {
     console.error(
       `fetchRotationChampions: 챔피언 로테이션 정보를 불러오는데 실패했습니다. ${error}`
     );
+    throw error;
   }
 }

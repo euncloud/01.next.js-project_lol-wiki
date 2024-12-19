@@ -2,7 +2,6 @@ import { getChampionImageUrl } from "@/app/utils/imageUtils";
 import { ChampionData } from "@/types/Champion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 function ChampionCard({ id, version, name, title, image, flag }: Pick<ChampionData, 'id' | 'version' | 'name' | 'title' | 'image'> & {flag: string}) {
 
