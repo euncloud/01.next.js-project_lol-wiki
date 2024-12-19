@@ -62,30 +62,6 @@ Riot API를 활용한 리그 오브 레전드 정보 앱
 ```
 
 <br>
-
-## 🛠 Technologies
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=React&logoColor=black">
-<img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=black">
-<img src="https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=black">
-<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=tailwindcss&logoColor=black">      
-
-<br>
-<br>
-
-## 프로젝트 목표 및 결과
-- Tailwind CSS 설치 및 적용
-- 로그인 유지 기능 구현(localStorage)
-- axios를 이용한 API 호출 및 axios Instance 사용
-- Tanstack Query 사용
-
-<br>
-
-## 프로젝트 회고
-서버별로 api 통신 방법이 다름을 이해하고 사용하는데 어려움이 있었다. 여러 라이브러리와 기능에 익숙치 않은 상태로 개발에 들어가서 코드가 제대로 정리되지 못했고 자잘한 버그가 많았으며, 수정하지 못했다.(등록한 테스트를 삭제하고 다른 페이지로 랜더링 하는 부분) json-server에서 데이터 수정은 어떤 식으로 하는지 알아보고 적용할 시간이 없어 아쉬웠다. 짧은 시간 내에 해결하기 위해 노력했고, 학습의 연장선이었다는 점에 긍정적인 의미를 둔다.
-<br><br>
-
-
 <br>
 
 ## 🛠 Technologies
